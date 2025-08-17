@@ -55,3 +55,38 @@ The goal of this exercise is to build a prototype utility that gives users abili
 ## What Happens Next?
 
 CharacterStrong tech team members will review your repo, share the built interface with interested colleagues, and reach out to you so we can review your submission and ask questions.
+
+===============================================================
+## Live Demo
+Check out the live application: https://milanpaladiya97.github.io/react-interview-exercise/
+
+
+## Project Summary & Implementation Details
+
+This section summarizes the key improvements and implementations made in this project:
+
+### Home.tsx
+- Added **state management** for districts, schools, selected items, and loading states.
+- Implemented **debounced search** for efficient API calls.
+- Added **caching** to prevent repeated API calls for the same queries.
+- Included **select dropdowns** for districts and dynamic school filtering.
+- Added a **details panel** for selected schools with location data.
+- Integrated **Google Maps display** to show school locations with markers.
+- Improved **UX and accessibility** using Chakra-UI components (spinners, responsive layout, hover states).
+
+### nces.ts
+- Refactored to normalize both **district and school attributes** for consistent structure.
+- Combined **private and public school endpoints** into unified search results.
+- Added **duplicate removal logic** for schools based on NCES ID or name/location.
+- Added **abort signals** to handle fast typing and cancel previous requests.
+- Improved error handling for network or API issues.
+- Optimized for TypeScript type safety with interfaces `NCESSchoolFeatureAttributes` and `NCESDistrictFeatureAttributes`.
+
+### package.json
+- Updated dependencies for better functionality and maintainability:
+  - `@chakra-ui/react`, `@emotion/react`, `@emotion/styled` for UI styling.
+  - `framer-motion` for animations.
+  - `@react-google-maps/api` for Google Maps integration.
+  - `@googlemaps/markerclusterer` for handling multiple map markers efficiently.
+- Upgraded TypeScript, Vite, and other dev dependencies for stability.
+- Explained why new packages were added to improve **UX, animations, and map functionality**.
